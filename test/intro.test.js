@@ -1,5 +1,5 @@
 import { describe, test, it, expect } from "vitest";
-import { fizzBuzz, max } from "../src/intro";
+import { factorial, fizzBuzz, max } from "../src/intro";
 
 describe("max", () => {
   it("should return the first argument if it is greater", () => {
@@ -30,5 +30,15 @@ describe("fizzbuzz", () => {
 
   it("should return the number  if the number is indivisible by either 3 or 5 ", () => {
     expect(fizzBuzz(1)).toBe("1");
+  });
+});
+
+describe("factorial", () => {
+  it("should return 1 for the factorial of 0", () => {
+    expect(factorial(0)).toBe(1);
+  });
+
+  it("should return the product of all positive numbers from 1 to that number ", () => {
+    expect(factorial(3)).toBe(6);
   });
 });
